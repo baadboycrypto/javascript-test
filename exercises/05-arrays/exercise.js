@@ -8,7 +8,7 @@
  */
 function createNumberArray() {
   // TODO: Create and return an array with numbers 1 through 5
-  
+  return [1, 2, 3, 4, 5];
 }
 
 /**
@@ -22,7 +22,7 @@ function createNumberArray() {
 function addToEnd(array, element) {
   // TODO: Create a new array with the element added to the end
   // Hint: Use spread operator [...array, element] or concat()
-  
+  return [...array, element];
 }
 
 /**
@@ -35,7 +35,7 @@ function addToEnd(array, element) {
 function removeFromStart(array) {
   // TODO: Return the first element of the array
   // Hint: Use array[0] or array indexing
-  
+  return array[0];
 }
 
 /**
@@ -47,7 +47,13 @@ function removeFromStart(array) {
 function findLargest(numbers) {
   // TODO: Find and return the largest number
   // Hint: Use Math.max() with spread operator or a loop
-  
+  let largest = numbers[0];
+  for (let i = 1; i < numbers.length; i++) {
+    if (numbers[i] > largest) {
+      largest = numbers[i];
+    }
+  }
+  return largest;
 }
 
 /**
@@ -59,7 +65,13 @@ function findLargest(numbers) {
 function filterEvenNumbers(numbers) {
   // TODO: Filter the array to only include even numbers
   // Hint: Use filter() method and modulo operator (%)
-  
+  const evens = [];
+  for (const num of numbers) {
+    if (num % 2 === 0) {
+      evens.push(num);
+    }
+  }
+  return evens;
 }
 
 /**
@@ -71,7 +83,11 @@ function filterEvenNumbers(numbers) {
 function sumArray(numbers) {
   // TODO: Calculate the sum of all numbers in the array
   // Hint: Use reduce() method or a loop
-  
+  let sum = 0;
+  for (const num of numbers) {
+    sum += num;
+  }
+  return sum;
 }
 
 // DO NOT MODIFY: Export functions for testing

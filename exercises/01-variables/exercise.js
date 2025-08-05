@@ -11,7 +11,13 @@
  */
 function createPersonInfo() {
   // TODO: Create and return an object with the specified properties
-  
+  const person = {
+    name: "Alex Johnson",
+    age: 28,
+    city: "New York",
+    isEmployed: true
+  };
+  return person;
 }
 
 /**
@@ -23,7 +29,8 @@ function createPersonInfo() {
  */
 function calculateAge(birthYear) {
   // TODO: Calculate age by subtracting birth year from 2024
-  
+  const currentYear = 2024;
+  return currentYear - birthYear;
 }
 
 /**
@@ -35,7 +42,7 @@ function calculateAge(birthYear) {
  */
 function formatFullName(firstName, lastName) {
   // TODO: Combine first and last name with a space between them
-  
+  return firstName + " " + lastName;
 }
 
 /**
@@ -46,7 +53,7 @@ function formatFullName(firstName, lastName) {
  */
 function checkAdult(age) {
   // TODO: Return true if age is 18 or greater, false otherwise
-  
+  return age >= 18;
 }
 
 /**
@@ -58,7 +65,7 @@ function checkAdult(age) {
  */
 function convertTemperature(celsius) {
   // TODO: Convert Celsius to Fahrenheit using the formula
-  
+  return (celsius * 9/5) + 32;
 }
 
 /**
@@ -70,7 +77,7 @@ function convertTemperature(celsius) {
  */
 function createGreeting(name, timeOfDay) {
   // TODO: Create a greeting message using template literals or string concatenation
-  
+  return `Good ${timeOfDay}, ${name}!`;
 }
 
 // DO NOT MODIFY: Export functions for testing
